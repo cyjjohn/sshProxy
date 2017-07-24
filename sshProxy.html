@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <title>云服务器ssh代理</title>
+    <link rel="stylesheet" href="sshProxy.css">
+    <script src="zooming.js"></script>
 </head>
 <body>
-<h1>阿里云9元半年自己搭代理吃鸡</h1>
+<header class="center">
+    <h1>云服务器自己搭代理吃鸡</h1>
+</header>
+<article class="center">
+    <h2>9元购买阿里云免费套餐云服务器ECS的半年使用权限</h2>
+    <img src="img/图片1.png"  width="840" data-action="zoom"/>
+    <p>
+        网址：<a href="https://free.aliyun.com/" target="_blank">https://free.aliyun.com/</a><br>
+        需要用到的工具
+        Bitvise+Proxifier
+        链接:
+        <a href=" https://pan.baidu.com/s/1b5OETK" target="_blank">https://pan.baidu.com/s/1b5OETK</a>&nbsp;密码: ayfi
+    </p>
 
+    <h3>一、创建实例</h3>
+    <p>
+        <img src="img/实例1.jpg"  width="840" data-action="zoom"/>
+        9元半年的，地域好像只有华东<br>
+        操作系统选择Linux的都行，我个人选的Ubuntu 64位<br>
+        创建完会接收一个“[自定义命名].pem”的公钥文件，切记保存好
+    </p>
+
+    <h3>二、配置安全组</h3>
+    <p>
+        阿里云管理控制台：<a href="https://home.console.aliyun.com/">https://home.console.aliyun.com/</a>，涂黑部分为IP,公有IP之后在登录时需要用到<br>
+        <img src="img/实例2.jpg"  width="840" data-action="zoom"/>
+        <br><br>进入ECS管理界面，配置本实例安全组，配置规则->添加安全规则，如图设置<br>
+        <img src="img/实例3.jpg"  width="840" data-action="zoom"/>
+
+
+    </p>
+
+    <h3>三、Bitvise设置</h3>
+    <p>
+        Login设置：<br>
+        <img src="img/bit1.png"  width="840" data-action="zoom"/><br>
+        Host：填写服务器的公有IP<br>
+        导入公钥文件,Clinet key manager->Import<br>
+        <br>
+        登录后觉得弹出界面烦可以关掉：<br>
+        <img src="img/bit2.png" width="840" data-action="zoom"/><br>
+        <br>
+        Service设置：<br>
+        <img src="img/bit3.png" width="840" data-action="zoom"/><br>
+    </p>
+
+    <h3>四、Proxifier设置</h3>
+    <p>
+        配置代理服务器
+        <img src="img/prox1.png" width="840" data-action="zoom"/><br>
+        <br>
+        Bitvise登录服务器后,检查,呈现原谅色则大功告成<br>
+        <img src="img/prox2.png" width="840" data-action="zoom"/><br>
+        <br>
+        编辑代理规则
+        <img src="img/prox3.png" width="840" data-action="zoom"/><br>
+        这样只对游戏进行代理，不会因为流量问题产生费用(大概，我不清楚阿里云的收费模式)
+        <br>
+    </p>
+
+</article>
+<footer>&copy;2017 written by cyjjohn </footer>
 </body>
 </html>
